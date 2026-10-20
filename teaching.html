@@ -12,6 +12,8 @@
             --garnet: #782F40;
             --text: #333333;
             --muted: #666666;
+            --border: #e4e4e4;
+            --soft-background: #faf9f8;
         }
 
         * {
@@ -71,74 +73,148 @@
             text-underline-offset: 5px;
         }
 
-        /* MAIN CONTENT */
+        /* MAIN PAGE */
 
         main {
-            padding-top: 45px;
-            padding-bottom: 65px;
+            padding-top: 48px;
+            padding-bottom: 75px;
         }
 
         h1 {
-            font-size: 29px;
-            margin: 0 0 25px;
+            font-size: 30px;
+            margin: 0 0 5px;
         }
 
-        h2 {
-            font-size: 22px;
+        .page-subtitle {
+            color: var(--muted);
+            font-size: 14px;
+            margin: 0 0 38px;
+            letter-spacing: 0.3px;
+        }
+
+        section {
+            margin-bottom: 48px;
+        }
+
+        .section-heading {
+            font-size: 23px;
             color: var(--garnet);
-            margin: 35px 0 15px;
+            padding-bottom: 9px;
+            margin: 0 0 25px;
+            border-bottom: 2px solid var(--garnet);
         }
 
-        h3 {
-            font-size: 18px;
-            margin: 22px 0 8px;
+        /* INSTRUCTOR OF RECORD */
+
+        .course-block {
+            margin-bottom: 30px;
         }
 
-        .course {
-            margin-bottom: 25px;
+        .course-title {
+            font-size: 19px;
+            font-weight: 600;
+            margin: 0 0 12px;
         }
 
-        .course p {
-            margin: 5px 0;
+        .course-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            gap: 20px;
+            padding: 9px 0;
+            border-bottom: 1px solid var(--border);
         }
 
-        .term {
-            margin-left: 18px;
+        .course-row:last-child {
+            border-bottom: none;
+        }
+
+        .course-term {
+            color: var(--text);
+        }
+
+        .course-evaluation {
+            color: var(--muted);
+            white-space: nowrap;
+            text-align: right;
+        }
+
+        .evaluation-score {
+            color: var(--garnet);
+            font-weight: 600;
         }
 
         .evaluation-note {
-            font-size: 14px;
             color: var(--muted);
+            font-size: 13px;
             margin-top: 15px;
         }
 
         /* STUDENT FEEDBACK */
 
-        .student-feedback {
-            margin-top: 20px;
+        .feedback-intro {
+            color: var(--muted);
+            font-size: 14px;
+            margin: -10px 0 24px;
         }
 
-        .quote {
-            margin: 0 0 30px;
-            padding-left: 20px;
+        .feedback-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            align-items: start;
+        }
+
+        .feedback-card {
+            background: var(--soft-background);
             border-left: 3px solid var(--garnet);
+            padding: 22px 24px;
         }
 
-        .quote p {
-            margin: 0 0 8px;
+        .feedback-card p {
+            font-size: 15px;
             font-style: italic;
+            line-height: 1.75;
+            margin: 0 0 15px;
         }
 
-        .attribution {
+        .feedback-attribution {
+            color: var(--muted);
+            font-size: 12px;
+            font-style: normal;
+        }
+
+        /* TEACHING ASSISTANT EXPERIENCE */
+
+        .ta-intro {
+            color: var(--muted);
+            margin: -10px 0 20px;
+            font-size: 14px;
+        }
+
+        .ta-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            column-gap: 40px;
+            row-gap: 0;
+        }
+
+        .ta-course {
+            padding: 12px 0;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .ta-detail {
+            display: block;
             color: var(--muted);
             font-size: 13px;
-            font-style: normal;
+            margin-top: 2px;
         }
 
         /* FOOTER */
 
         footer {
-            border-top: 1px solid #e5e5e5;
+            border-top: 1px solid var(--border);
             padding: 22px 0;
             color: var(--muted);
             font-size: 13px;
@@ -158,15 +234,29 @@
             }
 
             main {
-                padding-top: 30px;
+                padding-top: 32px;
             }
 
             h1 {
-                font-size: 25px;
+                font-size: 26px;
             }
 
-            .term {
-                margin-left: 10px;
+            .section-heading {
+                font-size: 21px;
+            }
+
+            .feedback-grid,
+            .ta-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .course-row {
+                flex-direction: column;
+                gap: 2px;
+            }
+
+            .course-evaluation {
+                text-align: left;
             }
         }
     </style>
@@ -198,159 +288,263 @@
     <main class="container">
 
         <h1>Teaching</h1>
+        <p class="page-subtitle">
+            Florida State University
+        </p>
+
+        <!-- INSTRUCTOR OF RECORD -->
 
         <section>
 
-            <h2>Instructor of Record</h2>
+            <h2 class="section-heading">
+                Instructor of Record
+            </h2>
 
-            <p>Florida State University</p>
+            <div class="course-block">
 
-            <!-- INTERMEDIATE MICROECONOMICS -->
+                <h3 class="course-title">
+                    Intermediate Microeconomic Theory
+                </h3>
 
-            <div class="course">
-
-                <h3>Intermediate Microeconomic Theory</h3>
-
-                <p class="term">
-                    Fall 2026 (ongoing)
-                </p>
+                <div class="course-row">
+                    <span class="course-term">
+                        Fall 2026
+                    </span>
+                    <span class="course-evaluation">
+                        Currently Teaching
+                    </span>
+                </div>
 
             </div>
 
-            <!-- INTRODUCTION TO ECONOMETRICS -->
+            <div class="course-block">
 
-            <div class="course">
+                <h3 class="course-title">
+                    Introduction to Econometrics
+                </h3>
 
-                <h3>Introduction to Econometrics</h3>
+                <div class="course-row">
+                    <span class="course-term">
+                        Summer B 2026
+                    </span>
+                    <span class="course-evaluation">
+                        Overall Evaluation:
+                        <span class="evaluation-score">
+                            4.86/5
+                        </span>
+                    </span>
+                </div>
 
-                <p class="term">
-                    Summer B 2026 &mdash;
-                    Overall Evaluation: 4.86/5
-                </p>
+                <div class="course-row">
+                    <span class="course-term">
+                        Summer A 2026
+                    </span>
+                    <span class="course-evaluation">
+                        Overall Evaluation:
+                        <span class="evaluation-score">
+                            5.00/5
+                        </span>
+                    </span>
+                </div>
 
-                <p class="term">
-                    Summer A 2026 &mdash;
-                    Overall Evaluation: 5/5
-                </p>
+                <div class="course-row">
+                    <span class="course-term">
+                        Summer 2025
+                    </span>
+                    <span class="course-evaluation">
+                        Overall Evaluation:
+                        <span class="evaluation-score">
+                            4.80/5
+                        </span>
+                    </span>
+                </div>
 
-                <p class="term">
-                    Summer 2025 &mdash;
-                    Overall Evaluation: 4.8/5
-                </p>
-
-                <p class="term">
-                    Summer 2024 &mdash;
-                    Overall Evaluation: 4.83/5
-                </p>
+                <div class="course-row">
+                    <span class="course-term">
+                        Summer 2024
+                    </span>
+                    <span class="course-evaluation">
+                        Overall Evaluation:
+                        <span class="evaluation-score">
+                            4.83/5
+                        </span>
+                    </span>
+                </div>
 
             </div>
 
             <p class="evaluation-note">
-                Teaching evaluations are reported on a
-                five-point scale.
+                Overall teaching evaluation scores are
+                reported on a five-point scale.
             </p>
 
         </section>
 
         <!-- SELECTED STUDENT FEEDBACK -->
 
-        <section class="student-feedback">
+        <section>
 
-            <h2>Selected Student Feedback</h2>
+            <h2 class="section-heading">
+                Selected Student Feedback
+            </h2>
 
-            <!-- QUOTE 1 -->
+            <p class="feedback-intro">
+                Anonymous comments from students in
+                Introduction to Econometrics.
+            </p>
 
-            <blockquote class="quote">
+            <div class="feedback-grid">
 
-                <p>
-                    "I think he explains concepts very well
-                    and cared that we understood. It also
-                    really shows that he cares and likes what
-                    he is teaching, so even when the course
-                    can be challenging, he was encouraging
-                    that we could do it. It was also helpful
-                    that in class he asked us questions that
-                    forced us to keep reviewing the material
-                    and say things over and over again."
-                </p>
+                <!-- COMMENT 1 -->
 
-                <div class="attribution">
-                    Anonymous Student &middot;
-                    Introduction to Econometrics
+                <div class="feedback-card">
+
+                    <p>
+                        "I think he explains concepts very
+                        well and cared that we understood.
+                        It also really shows that he cares
+                        and likes what he is teaching, so
+                        even when the course can be
+                        challenging, he was encouraging
+                        that we could do it. It was also
+                        helpful that in class he asked us
+                        questions that forced us to keep
+                        reviewing the material and say
+                        things over and over again."
+                    </p>
+
+                    <div class="feedback-attribution">
+                        Anonymous Student
+                    </div>
+
                 </div>
 
-            </blockquote>
+                <!-- COMMENT 2 -->
 
-            <!-- QUOTE 2 -->
+                <div class="feedback-card">
 
-            <blockquote class="quote">
+                    <p>
+                        "Scooter is fantastic at breaking
+                        down this course and making it
+                        easy to understand which I think
+                        is difficult to do in a normal
+                        length course, he's done it in a
+                        6 weeks course. He provides so
+                        much support outside the class
+                        room as well and dediciated a lot
+                        of time to making sure his
+                        students who are putting in the
+                        effort for the class are prepared
+                        and fully understand the material."
+                    </p>
 
-                <p>
-                    "Scooter is fantastic at breaking down
-                    this course and making it easy to
-                    understand which I think is difficult
-                    to do in a normal length course,
-                    he's done it in a 6 weeks course.
-                    He provides so much support outside
-                    the class room as well and dediciated
-                    a lot of time to making sure his
-                    students who are putting in the effort
-                    for the class are prepared and fully
-                    understand the material."
-                </p>
+                    <div class="feedback-attribution">
+                        Anonymous Student
+                    </div>
 
-                <div class="attribution">
-                    Anonymous Student &middot;
-                    Introduction to Econometrics
                 </div>
 
-            </blockquote>
+                <!-- COMMENT 3 -->
 
-            <!-- QUOTE 3 -->
+                <div class="feedback-card">
 
-            <blockquote class="quote">
+                    <p>
+                        "His explanations were always
+                        super clear and helpful. It seems
+                        like he enjoys to teach, which
+                        in turn makes his lectures
+                        enjoyable and interesting.
+                        Overall, I leaned a lot during
+                        this course."
+                    </p>
 
-                <p>
-                    "His explanations were always super
-                    clear and helpful. It seems like he
-                    enjoys to teach, which in turn makes
-                    his lectures enjoyable and interesting.
-                    Overall, I leaned a lot during this
-                    course."
-                </p>
+                    <div class="feedback-attribution">
+                        Anonymous Student
+                    </div>
 
-                <div class="attribution">
-                    Anonymous Student &middot;
-                    Introduction to Econometrics
                 </div>
 
-            </blockquote>
+                <!-- COMMENT 4 -->
 
-            <!-- QUOTE 4 -->
+                <div class="feedback-card">
 
-            <blockquote class="quote">
+                    <p>
+                        "The overall course structure
+                        was extremely effective in
+                        helping me understand the
+                        material. Each module built
+                        naturally upon the previous
+                        one, and the progression of
+                        topics felt logical and
+                        manageable. [...]
+                        This was one of the few
+                        courses where it consistently
+                        felt as though everything was
+                        coming together, and I was
+                        able to build a deeper
+                        understanding of the material
+                        with each class."
+                    </p>
 
-                <p>
-                    "The overall course structure was
-                    extremely effective in helping me
-                    understand the material. Each module
-                    built naturally upon the previous one,
-                    and the progression of topics felt
-                    logical and manageable. [...]
-                    This was one of the few courses where
-                    it consistently felt as though
-                    everything was coming together, and
-                    I was able to build a deeper
-                    understanding of the material with
-                    each class."
-                </p>
+                    <div class="feedback-attribution">
+                        Anonymous Student
+                    </div>
 
-                <div class="attribution">
-                    Anonymous Student &middot;
-                    Introduction to Econometrics
                 </div>
 
-            </blockquote>
+            </div>
+
+        </section>
+
+        <!-- TEACHING ASSISTANT EXPERIENCE -->
+
+        <section>
+
+            <h2 class="section-heading">
+                Teaching Assistant Experience
+            </h2>
+
+            <p class="ta-intro">
+                Florida State University
+            </p>
+
+            <div class="ta-grid">
+
+                <div class="ta-course">
+                    Principles of Microeconomics
+                    <span class="ta-detail">
+                        Large lecture, 300–500 students
+                    </span>
+                </div>
+
+                <div class="ta-course">
+                    Principles of Macroeconomics
+                    <span class="ta-detail">
+                        Large lecture, 300–500 students
+                    </span>
+                </div>
+
+                <div class="ta-course">
+                    Intermediate Microeconomics
+                </div>
+
+                <div class="ta-course">
+                    Economics of Health
+                </div>
+
+                <div class="ta-course">
+                    Introduction to Economics
+                </div>
+
+                <div class="ta-course">
+                    Economics of Population
+                </div>
+
+                <div class="ta-course">
+                    Analysis of Economic Data
+                </div>
+
+            </div>
 
         </section>
 
