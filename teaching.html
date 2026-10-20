@@ -1,0 +1,368 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Teaching | Scooter Natoli-Henry</title>
+
+    <style>
+        :root {
+            --garnet: #782F40;
+            --text: #333333;
+            --muted: #666666;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            color: var(--text);
+            background: white;
+            line-height: 1.7;
+        }
+
+        .container {
+            max-width: 950px;
+            margin: 0 auto;
+            padding: 0 28px;
+        }
+
+        /* HEADER */
+
+        header {
+            background-color: var(--garnet);
+            padding: 28px 0;
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .site-name {
+            font-size: 24px;
+            font-weight: bold;
+            color: white;
+            text-decoration: none;
+        }
+
+        nav {
+            display: flex;
+            gap: 24px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 15px;
+        }
+
+        nav a:hover,
+        nav a.active {
+            color: white;
+            text-decoration: underline;
+            text-underline-offset: 5px;
+        }
+
+        /* MAIN CONTENT */
+
+        main {
+            padding-top: 45px;
+            padding-bottom: 65px;
+        }
+
+        h1 {
+            font-size: 29px;
+            margin: 0 0 25px;
+        }
+
+        h2 {
+            font-size: 22px;
+            color: var(--garnet);
+            margin: 35px 0 15px;
+        }
+
+        h3 {
+            font-size: 18px;
+            margin: 22px 0 8px;
+        }
+
+        .course {
+            margin-bottom: 25px;
+        }
+
+        .course p {
+            margin: 5px 0;
+        }
+
+        .term {
+            margin-left: 18px;
+        }
+
+        .evaluation-note {
+            font-size: 14px;
+            color: var(--muted);
+            margin-top: 15px;
+        }
+
+        /* STUDENT FEEDBACK */
+
+        .student-feedback {
+            margin-top: 20px;
+        }
+
+        .quote {
+            margin: 0 0 30px;
+            padding-left: 20px;
+            border-left: 3px solid var(--garnet);
+        }
+
+        .quote p {
+            margin: 0 0 8px;
+            font-style: italic;
+        }
+
+        .attribution {
+            color: var(--muted);
+            font-size: 13px;
+            font-style: normal;
+        }
+
+        /* FOOTER */
+
+        footer {
+            border-top: 1px solid #e5e5e5;
+            padding: 22px 0;
+            color: var(--muted);
+            font-size: 13px;
+        }
+
+        /* MOBILE LAYOUT */
+
+        @media (max-width: 650px) {
+            .header-content {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            nav {
+                flex-wrap: wrap;
+                gap: 18px;
+            }
+
+            main {
+                padding-top: 30px;
+            }
+
+            h1 {
+                font-size: 25px;
+            }
+
+            .term {
+                margin-left: 10px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- HEADER -->
+
+    <header>
+        <div class="container header-content">
+
+            <a class="site-name" href="index.html">
+                Scooter Natoli-Henry
+            </a>
+
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="research.html">Research</a>
+                <a class="active" href="teaching.html">Teaching</a>
+                <a href="cv.pdf">CV</a>
+            </nav>
+
+        </div>
+    </header>
+
+    <!-- TEACHING PAGE -->
+
+    <main class="container">
+
+        <h1>Teaching</h1>
+
+        <section>
+
+            <h2>Instructor of Record</h2>
+
+            <p>Florida State University</p>
+
+            <!-- INTERMEDIATE MICROECONOMICS -->
+
+            <div class="course">
+
+                <h3>Intermediate Microeconomic Theory</h3>
+
+                <p class="term">
+                    Fall 2026 (ongoing)
+                </p>
+
+            </div>
+
+            <!-- INTRODUCTION TO ECONOMETRICS -->
+
+            <div class="course">
+
+                <h3>Introduction to Econometrics</h3>
+
+                <p class="term">
+                    Summer B 2026 &mdash;
+                    Overall Evaluation: 4.86/5
+                </p>
+
+                <p class="term">
+                    Summer A 2026 &mdash;
+                    Overall Evaluation: 5/5
+                </p>
+
+                <p class="term">
+                    Summer 2025 &mdash;
+                    Overall Evaluation: 4.8/5
+                </p>
+
+                <p class="term">
+                    Summer 2024 &mdash;
+                    Overall Evaluation: 4.83/5
+                </p>
+
+            </div>
+
+            <p class="evaluation-note">
+                Teaching evaluations are reported on a
+                five-point scale.
+            </p>
+
+        </section>
+
+        <!-- SELECTED STUDENT FEEDBACK -->
+
+        <section class="student-feedback">
+
+            <h2>Selected Student Feedback</h2>
+
+            <!-- QUOTE 1 -->
+
+            <blockquote class="quote">
+
+                <p>
+                    "I think he explains concepts very well
+                    and cared that we understood. It also
+                    really shows that he cares and likes what
+                    he is teaching, so even when the course
+                    can be challenging, he was encouraging
+                    that we could do it. It was also helpful
+                    that in class he asked us questions that
+                    forced us to keep reviewing the material
+                    and say things over and over again."
+                </p>
+
+                <div class="attribution">
+                    Anonymous Student &middot;
+                    Introduction to Econometrics
+                </div>
+
+            </blockquote>
+
+            <!-- QUOTE 2 -->
+
+            <blockquote class="quote">
+
+                <p>
+                    "Scooter is fantastic at breaking down
+                    this course and making it easy to
+                    understand which I think is difficult
+                    to do in a normal length course,
+                    he's done it in a 6 weeks course.
+                    He provides so much support outside
+                    the class room as well and dediciated
+                    a lot of time to making sure his
+                    students who are putting in the effort
+                    for the class are prepared and fully
+                    understand the material."
+                </p>
+
+                <div class="attribution">
+                    Anonymous Student &middot;
+                    Introduction to Econometrics
+                </div>
+
+            </blockquote>
+
+            <!-- QUOTE 3 -->
+
+            <blockquote class="quote">
+
+                <p>
+                    "His explanations were always super
+                    clear and helpful. It seems like he
+                    enjoys to teach, which in turn makes
+                    his lectures enjoyable and interesting.
+                    Overall, I leaned a lot during this
+                    course."
+                </p>
+
+                <div class="attribution">
+                    Anonymous Student &middot;
+                    Introduction to Econometrics
+                </div>
+
+            </blockquote>
+
+            <!-- QUOTE 4 -->
+
+            <blockquote class="quote">
+
+                <p>
+                    "The overall course structure was
+                    extremely effective in helping me
+                    understand the material. Each module
+                    built naturally upon the previous one,
+                    and the progression of topics felt
+                    logical and manageable. [...]
+                    This was one of the few courses where
+                    it consistently felt as though
+                    everything was coming together, and
+                    I was able to build a deeper
+                    understanding of the material with
+                    each class."
+                </p>
+
+                <div class="attribution">
+                    Anonymous Student &middot;
+                    Introduction to Econometrics
+                </div>
+
+            </blockquote>
+
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+
+    <footer>
+        <div class="container">
+            &copy; 2026 Scooter Natoli-Henry
+        </div>
+    </footer>
+
+</body>
+</html>
