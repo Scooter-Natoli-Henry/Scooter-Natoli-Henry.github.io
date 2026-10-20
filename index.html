@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scooter Natoli-Henry | Economics</title>
+
+    <style>
+        :root {
+            --garnet: #782F40;
+            --text: #333333;
+            --muted: #666666;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            color: var(--text);
+            background: white;
+            line-height: 1.7;
+        }
+
+        .container {
+            max-width: 950px;
+            margin: 0 auto;
+            padding: 0 28px;
+        }
+
+        header {
+            border-bottom: 1px solid #e5e5e5;
+            padding: 28px 0;
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .site-name {
+            font-size: 24px;
+            font-weight: bold;
+            color: var(--garnet);
+            text-decoration: none;
+        }
+
+        nav {
+            display: flex;
+            gap: 24px;
+        }
+
+        nav a {
+            color: var(--text);
+            text-decoration: none;
+            font-size: 15px;
+        }
+
+        nav a:hover,
+        nav a.active {
+            color: var(--garnet);
+        }
+
+        main {
+            padding-top: 55px;
+            padding-bottom: 65px;
+        }
+
+        .profile {
+            display: flex;
+            align-items: flex-start;
+            gap: 35px;
+        }
+
+        .profile-photo {
+            width: 185px;
+            height: auto;
+            border-radius: 3px;
+            flex-shrink: 0;
+        }
+
+        .biography {
+            flex: 1;
+        }
+
+        .biography h1 {
+            margin: 0 0 12px;
+            font-size: 27px;
+            font-weight: 600;
+        }
+
+        .biography p {
+            margin: 0 0 18px;
+        }
+
+        a {
+            color: var(--garnet);
+        }
+
+        .contact {
+            margin-top: 26px;
+        }
+
+        footer {
+            border-top: 1px solid #e5e5e5;
+            padding: 22px 0;
+            color: var(--muted);
+            font-size: 13px;
+        }
+
+        @media (max-width: 650px) {
+            .header-content {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            nav {
+                flex-wrap: wrap;
+                gap: 18px;
+            }
+
+            .profile {
+                flex-direction: column;
+            }
+
+            .profile-photo {
+                width: 155px;
+            }
+
+            main {
+                padding-top: 35px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div class="container header-content">
+            <a class="site-name" href="index.html">
+                Scooter Natoli-Henry
+            </a>
+
+            <nav>
+                <a class="active" href="index.html">Home</a>
+                <a href="research.html">Research</a>
+                <a href="teaching.html">Teaching</a>
+                <a href="cv.pdf">CV</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="profile">
+
+            <!-- Add your headshot as headshot.jpg later -->
+            <img
+                class="profile-photo"
+                src="headshot.jpg"
+                alt="Professional headshot of Scooter Natoli-Henry"
+            >
+
+            <div class="biography">
+                <h1>About Me</h1>
+
+                <p>
+                    I am a PhD candidate in Economics at Florida
+                    State University. My research interests are in
+                    health economics, public economics, and applied
+                    microeconomics.
+                </p>
+
+                <p>
+                    My job market paper examines how the removal of
+                    a sales tax exemption for condoms in Texas
+                    affected risky sexual behavior and sexual health
+                    outcomes. In particular, I study how increasing
+                    the cost of safe sex influences rates of sexually
+                    transmitted infections among young people.
+                </p>
+
+                <p>
+                    Teaching is an important and rewarding part of
+                    my academic work. I have served as the
+                    instructor of record for undergraduate courses
+                    in Introduction to Econometrics and Intermediate
+                    Microeconomics at Florida State University.
+                    My approach to teaching emphasizes developing
+                    economic intuition alongside formal analytical
+                    skills, helping students understand not only
+                    how economic models work, but also how to apply
+                    them to real-world problems.
+                </p>
+
+                <p class="contact">
+                    <strong>Email:</strong>
+                    <a href="mailto:jnatolihenry@fsu.edu">
+                        jnatolihenry@fsu.edu
+                    </a>
+                </p>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            © 2026 Scooter Natoli-Henry
+        </div>
+    </footer>
+
+</body>
+</html>
