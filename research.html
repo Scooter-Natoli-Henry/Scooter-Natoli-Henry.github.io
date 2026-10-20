@@ -1,0 +1,270 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Research | Scooter Natoli-Henry</title>
+
+    <style>
+        :root {
+            --garnet: #782F40;
+            --text: #333333;
+            --muted: #666666;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            color: var(--text);
+            background: white;
+            line-height: 1.7;
+        }
+
+        .container {
+            max-width: 950px;
+            margin: 0 auto;
+            padding: 0 28px;
+        }
+
+        /* HEADER */
+
+        header {
+            background-color: var(--garnet);
+            padding: 28px 0;
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .site-name {
+            font-size: 24px;
+            font-weight: bold;
+            color: white;
+            text-decoration: none;
+        }
+
+        nav {
+            display: flex;
+            gap: 24px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 15px;
+        }
+
+        nav a:hover,
+        nav a.active {
+            color: white;
+            text-decoration: underline;
+            text-underline-offset: 5px;
+        }
+
+        /* MAIN CONTENT */
+
+        main {
+            padding-top: 45px;
+            padding-bottom: 65px;
+        }
+
+        h1 {
+            font-size: 29px;
+            margin: 0 0 25px;
+        }
+
+        h2 {
+            font-size: 22px;
+            margin: 35px 0 15px;
+            color: var(--garnet);
+        }
+
+        .paper-title {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 16px;
+        }
+
+        .abstract {
+            text-align: left;
+            margin-bottom: 30px;
+        }
+
+        .research-figure {
+            margin: 30px auto;
+            max-width: 780px;
+            text-align: center;
+        }
+
+        .research-figure img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .figure-caption {
+            color: var(--muted);
+            font-size: 13px;
+            margin-top: 12px;
+        }
+
+        .work-in-progress {
+            margin-bottom: 15px;
+        }
+
+        /* FOOTER */
+
+        footer {
+            border-top: 1px solid #e5e5e5;
+            padding: 22px 0;
+            color: var(--muted);
+            font-size: 13px;
+        }
+
+        /* MOBILE LAYOUT */
+
+        @media (max-width: 650px) {
+            .header-content {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            nav {
+                flex-wrap: wrap;
+                gap: 18px;
+            }
+
+            main {
+                padding-top: 30px;
+            }
+
+            h1 {
+                font-size: 25px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- HEADER -->
+
+    <header>
+        <div class="container header-content">
+
+            <a class="site-name" href="index.html">
+                Scooter Natoli-Henry
+            </a>
+
+            <nav>
+                <a href="index.html">Home</a>
+                <a class="active" href="research.html">Research</a>
+                <a href="teaching.html">Teaching</a>
+                <a href="cv.pdf">CV</a>
+            </nav>
+
+        </div>
+    </header>
+
+    <!-- RESEARCH PAGE -->
+
+    <main class="container">
+
+        <h1>Research</h1>
+
+        <section>
+
+            <h2>Job Market Paper</h2>
+
+            <div class="paper-title">
+                Everything's Bigger in Taxas: The Effect of
+                Condom Sales Tax on Sexual Health Outcomes
+                with Evidence from Texas
+            </div>
+
+            <p class="abstract">
+                In 2007, Texas enacted legislation that removed
+                condoms from the list of products exempt from
+                the state sales tax, effectively increasing the
+                price of safe sex. Condoms are commonly used
+                to prevent sexually transmitted infections
+                (STIs), making this policy a useful setting
+                for examining how the cost of protection
+                influences sexual health outcomes. Using a
+                synthetic difference-in-differences approach,
+                this paper examines the effects of the policy
+                on STI rates among young adults in Texas.
+                I find statistically significant increases
+                in gonorrhea rates among individuals aged
+                20–24, with estimated increases of 20% for
+                women and 26% for men relative to their
+                respective pretreatment means. These findings
+                suggest that increases in the cost of protection
+                can have meaningful consequences for sexual
+                health.
+            </p>
+
+            <!-- JOB MARKET PAPER FIGURE -->
+
+            <figure class="research-figure">
+
+                <img
+                    src="gono_male_20_24.png"
+                    alt="Estimated effects of the Texas condom sales
+                    tax policy on gonorrhea rates among men
+                    aged 20 to 24, with confidence intervals."
+                >
+
+                <figcaption class="figure-caption">
+                    Estimated effect on gonorrhea rates among
+                    men aged 20–24 in Texas.
+                </figcaption>
+
+            </figure>
+
+        </section>
+
+        <!-- WORKS IN PROGRESS -->
+
+        <section>
+
+            <h2>Works in Progress</h2>
+
+            <div class="work-in-progress">
+                <em>
+                    The Price of Pleasure: The Effects of
+                    Decriminalizing and Re-criminalizing
+                    Indoor Prostitution in Rhode Island
+                </em>
+            </div>
+
+            <div class="work-in-progress">
+                <em>
+                    The Effects of Statewide Comprehensive
+                    Sex Education Laws on Risky Sexual Behaviors
+                </em>
+            </div>
+
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+
+    <footer>
+        <div class="container">
+            © 2026 Scooter Natoli-Henry
+        </div>
+    </footer>
+
+</body>
+</html>
